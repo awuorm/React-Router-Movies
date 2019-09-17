@@ -4,7 +4,6 @@ import MovieCard from "./MovieCard";
 
 const Movie = props => {
   const [movie, setMovie] = useState(null);
-  console.log("Movie props");
 
   useEffect(() => {
     const id = props.match.params.id;
@@ -31,9 +30,7 @@ const Movie = props => {
   if (!movie) {
     return <div>Loading movie information...</div>;
   }
-
-  // const { title, director, metascore, stars } = movie;
-
+  //Rendering movie card component
   return (
     <div className="save-wrapper">
       <MovieCard movie={movie} />
